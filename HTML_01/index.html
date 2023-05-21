@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bing web Test</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            /* Hintergrundfarbe des gesamten Dokuments */
+            color: rgb(231, 227, 227);
+            /* Textfarbe des gesamten Dokuments */
+            display: flex;
+            /* Das body-Element als flexiblen Container definieren */
+            flex-direction: column;
+            /* Die Elemente im body-Element vertikal anordnen */
+            min-height: 96vh;
+            /* Die minimale Höhe des body-Elements auf die Höhe des Viewports setzen */
+
+        }
+
+        header {
+            margin: 0;
+        }
+
+        header h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav {
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        header nav ul li.button {
+            list-style-type: none;
+            margin: 0;
+            margin-right: 4px;
+            padding: 5px 10px 5px 10px;
+            background-color: rgba(253, 253, 228, 0.38);
+        }
+
+        header nav ul li.button:first-child {
+            border-top-left-radius: 17px;
+            border-bottom-left-radius: 17px;
+        }
+
+        header nav ul li.button:last-child {
+            border-top-right-radius: 17px;
+            border-bottom-right-radius: 17px;
+        }
+
+        header nav ul li.button:active {
+            background-color: rgba(250, 250, 147, 0.747);
+        }
+
+        section#Inhalt {
+            margin: 0;
+            order: 1;
+            /* Den section-Tag nach dem header-Tag platzieren */
+            background-color: rgb(0, 0, 0);
+            /* Hintergrundfarbe von section Class="Inhalt" */
+        }
+
+        footer {
+            order: 2;
+            /* Den footer-Tag nach dem nav-Tag platzieren */
+            margin-top: auto;
+            /* Den oberen Abstand des footer-Tags automatisch anpassen, um ihn nach unten zu rücken */
+            background-color: rgba(253, 253, 228, 0.38);
+            /* Hintergrundfarbe footer */
+            padding-left: 15px;
+        }
+
+        .hiddenObj {
+            display: none;
+        }
+    </style>
+    <script>
+
+        function myFunction(box) {
+            document.getElementById("Inhalt").innerHTML = document.getElementById(box).innerHTML;
+        }
+
+        function Versteckmich(box) {
+            var x = document.getElementById(box);
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>BING IA WEB TEST</h1>
+        <nav>
+            <ul>
+                <li class="button" onclick="myFunction('myDIV_1')">Button 1</li>
+                <li class="button" onclick="myFunction('myDIV_2')">Button 2</li>
+                <li class="button" onclick="myFunction('myDIV_3')">Button 3</li>
+                <li class="button" onclick="myFunction('myDIV_4')">Button 4</li>
+                <li class="button" onclick="myFunction('myDIV_5')">Button 5</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="Inhalt">
+        <p>Hier kann Ihr Inhalt Stehen</p>
+    </section>
+  
+    <section id="hidden_inhalte" class="hiddenObj">
+        <div id="myDIV_1" class="hiddenObj">
+            <p>Hello World!</p>
+            <table>
+                <tr>
+                    <th>Nr.</th>
+                    <th>Article</th>
+                    <th>summe</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2. Hand</td>
+                    <td>1,00</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2. Hand</td>
+                    <td>7,00</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>2. Hand</td>
+                    <td>15,00</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>2. Hand</td>
+                    <td>1,20</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>2. Hand</td>
+                    <td>1,50</td>
+                </tr>
+            </table>
+        </div>
+        <div id="myDIV_2" class="hiddenObj">
+            <p>Hello World 2!</p>
+            <table>
+                <tr>
+                    <th>Nr.</th>
+                    <th>Article</th>
+                    <th>summe</th>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>2. Hand</td>
+                    <td>1,00</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>2. Hand</td>
+                    <td>7,00</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>2. Hand</td>
+                    <td>15,00</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>2. Hand</td>
+                    <td>1,20</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>2. Hand</td>
+                    <td>1,50</td>
+                </tr>
+            </table>
+        </div>
+        <div id="myDIV_3" class="hiddenObj">
+            <p>Hello World 3!</p>
+            <button onclick="Versteckmich('myDIV_32')">drück mir</button>
+            <div id="myDIV_32" style="display:none;">
+                <p>Wichtig!!!</p>
+                <p>
+                    Bla bla. Bla blaBla bla Bla bla,<br />
+                    Bla bla Bla bla Bla bla Bla bla Bla bla 
+                    Bla bla Bla bla Bla bla Bla bla Bla bla.
+                </p>
+                <p>der autor</p>
+            </div>
+        </div>
+        <div id="myDIV_4" class="hiddenObj">
+            <p>Hello World 4!</p>
+            <p>Hier kann Ihr Inhalt Stehen</p>
+        </div>
+        <div id="myDIV_5" class="hiddenObj">
+            <p>Hello World 5!</p>
+            <p>Hier kann Ihr Inhalt Stehen</p>
+        </div>
+    </section>
+  
+    <footer>
+        <p>Erstellt mit der Bing IA</p>
+    </footer>
+</body>
+</html>
