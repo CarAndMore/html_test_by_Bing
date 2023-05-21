@@ -26,6 +26,16 @@
         header h1 {
             margin: 0;
             padding: 0;
+            text-shadow:
+                1px 1px 2px #ffffff,
+                -1px 1px 2px#ffffff,
+                1px -1px 2px#ffffff,
+                -1px -1px 2px#ffffff,
+                2px 2px 2px#ff0000,
+                2px -2px 2px #edf383,
+                -2px -2px 2px #edf383,
+                -2px 2px 2px #edf383;
+            color: rgb(0, 0, 0);
         }
 
         header nav {
@@ -84,6 +94,13 @@
         .hiddenObj {
             display: none;
         }
+        #kundendaten {
+            border: #edf383 1px solid;
+        } 
+        #kundendaten tbody tr td {
+            font-weight: bold;
+            border-top: #edf383 1px solid;
+        }
     </style>
     <script>
 
@@ -119,7 +136,6 @@
     <section id="Inhalt">
         <p>Hier kann Ihr Inhalt Stehen</p>
     </section>
-  
     <section id="hidden_inhalte" class="hiddenObj">
         <div id="myDIV_1" class="hiddenObj">
             <p>Hello World!</p>
@@ -190,6 +206,69 @@
                     <td>1,50</td>
                 </tr>
             </table>
+
+            <table id="kundendaten">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>KundenNr.</th>
+                        <th>Telefon</th>
+                        <th>Adresse</th>
+                        <th>Wohnort</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Max Mustermann</td>
+                        <td>12345</td>
+                        <td>0123-4567890</td>
+                        <td>Musterstraße 1</td>
+                        <td>Musterstadt</td>
+                    </tr>
+                    <tr>
+                        <td>Erika Mustermann</td>
+                        <td>67890</td>
+                        <td>0123-9876543</td>
+                        <td>Musterweg 2</td>
+                        <td>Musterdorf</td>
+                    </tr>
+                    <tr>
+                        <td>Hans Müller</td>
+                        <td>24680</td>
+                        <td>0123-1357902</td>
+                        <td>Musterplatz 3</td>
+                        <td>Musterhausen</td>
+                    </tr>
+                    <tr>
+                        <td>Sabine Schmidt</td>
+                        <td>13579</td>
+                        <td>0123-2468013</td>
+                        <td>Musterweg 4</td>
+                        <td>Musterort</td>
+                    </tr>
+                    <tr>
+                        <td>Johannes Bachmann</td>
+                        <td>54321</td>
+                        <td>0123-0987654</td>
+                        <td>Bachstraße 5a</td>
+                        <td>Bachstadt</td>
+                    </tr>
+                    <tr>
+                        <td>Lisa Meier</td>
+                        <td>98765</td>
+                        <td>0123-5678901</td>
+                        <td>Meierweg 6b</td>
+                        <td>Meierdorf</td>
+                    </tr>
+                    <tr>
+                        <td>Felix Schulz</td>
+                        <td>24601</td>
+                        <td>0123-2345678</td>
+                        <td>Schulzstraße 7c</td>
+                        <td>Schulzhausen</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         <div id="myDIV_3" class="hiddenObj">
             <p>Hello World 3!</p>
@@ -198,7 +277,7 @@
                 <p>Wichtig!!!</p>
                 <p>
                     Bla bla. Bla blaBla bla Bla bla,<br />
-                    Bla bla Bla bla Bla bla Bla bla Bla bla 
+                    Bla bla Bla bla Bla bla Bla bla Bla bla
                     Bla bla Bla bla Bla bla Bla bla Bla bla.
                 </p>
                 <p>der autor</p>
@@ -213,9 +292,9 @@
             <p>Hier kann Ihr Inhalt Stehen</p>
         </div>
     </section>
-  
     <footer>
         <p>Erstellt mit der Bing IA</p>
     </footer>
 </body>
+
 </html>
